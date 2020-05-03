@@ -5,7 +5,7 @@
 # A successful command (like ls) -> 😎 🐶 🌼
 # A failed command (like ls123) -> 💩
 
-# location : Place this in user's local .bashrc file (i.e. ~/.bashrc)
+# location : Place this function and export in user's local .bashrc file (i.e. in ~/.bashrc)
 
 function success_indicator() {
     if [ $? -eq 0 ] ; then
