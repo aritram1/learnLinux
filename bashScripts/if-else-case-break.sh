@@ -2,7 +2,7 @@
 
 # Most notables are :
 
-# if-else
+# if-else-elif
 num=100
 if [ $num>0 ] #note this format [ <Expression> ]
     then
@@ -13,7 +13,7 @@ fi
 # Expected : 100 is positive
 
 # -------------------------------------------------------
-# switch-case
+# switch case control statement
 weekday=$(date "+%A")
 echo 'Today is' $weekday
 case $weekday in
@@ -30,18 +30,16 @@ esac
 
 # -------------------------------------------------------
 # Also let's have a look at break/continue statement
-num=10
-while [ $num -gt 0 ] #while : # alternatively while[ $num -gt 0 ]
+breakAt=10; val=0
+while : # -> infinite loop
     do
-    if [ $num -gt 5 ]
-    then
-        echo 'continuing with' $num
-        # continue
+    (( val++ )) # be careful no $, alternatively -> val=$((val-1))
+    if [ $val -ne $breakAt ]
+        then
+        echo 'continuing with' $val
+        continue
     else
-        echo 'breaking at' $num
+        echo 'breaking at' $val
         break
     fi
-    num=$(($num-1)) # or ((num--)) -> be careful to use num, NOT $num
     done
-
-# Edn of fun
