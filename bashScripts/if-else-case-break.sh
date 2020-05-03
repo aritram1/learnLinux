@@ -4,10 +4,10 @@
 
 # if-else
 num=100
-if [[ $num>0 ]] #note this format [[ <Expression> ]]
+if [ $num>0 ] #note this format [ <Expression> ]
     then
     echo $num 'is positive'
-else # or 'elif [[ <Expression> ]]
+else # or 'elif [ <Expression> ]
     echo $num 'is negative'
 fi
 # Expected : 100 is positive
@@ -31,7 +31,7 @@ esac
 # -------------------------------------------------------
 # Also let's have a look at break/continue statement
 num=10
-while [ $num -gt 0 ] #while : # alternatively while[[ $num -gt 0 ]]
+while [ $num -gt 0 ] #while : # alternatively while[ $num -gt 0 ]
     do
     if [ $num -gt 5 ]
     then
@@ -41,5 +41,7 @@ while [ $num -gt 0 ] #while : # alternatively while[[ $num -gt 0 ]]
         echo 'breaking at' $num
         break
     fi
-    num=$(($num-1)) # or ((num--)) -> be careful (($num--)) does not work
+    num=$(($num-1)) # or ((num--)) -> be careful to use num, NOT $num
     done
+
+# Edn of fun
