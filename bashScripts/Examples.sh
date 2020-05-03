@@ -3,20 +3,8 @@
 # Solve these beginner problems in bash scripts
 
 # Hello World
-echo 'Hello World!' # pretty simple
 # Echo Command
-
-# Comments
-# This is a test comment
-
-# Multi-line comment
-'
-This is 
-a multi
-line 
-comment
-'
-
+# Comment
 # While Loop
 # For Loop
 # Get User Input
