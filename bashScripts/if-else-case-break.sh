@@ -29,17 +29,21 @@ esac
 # It's weekend!
 
 # -------------------------------------------------------
-# Also let's have a look at break/continue statement
-breakAt=10; val=0
+# Also let's have a look at break/continue statement by 
+# printing all positive numbers till maximum number
+maximum=10; val=-10
 while : # -> infinite loop
     do
-    (( val++ )) # be careful no $, alternatively -> val=$((val-1))
-    if [ $val -ne $breakAt ]
-        then
-        echo 'continuing with' $val
+    (( val++ )) # note no $ sign. alternatively -> val=$((val-1))
+    if [ $val -lt 0 ]; then
+        echo 'ignoring negatives' $val
         continue
-    else
+    fi
+    echo 'considering positive values' $val
+    if [ $val -eq $maximum ]; then  
         echo 'breaking at' $val
         break
     fi
     done
+    
+#End of fun :)
