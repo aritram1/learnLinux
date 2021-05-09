@@ -8,3 +8,4 @@ This contains
 - Unix architechture : https://en.wikipedia.org/wiki/Unix_architecture
 - Everything is a file : https://en.wikipedia.org/wiki/Everything_is_a_file
 - List of commands : https://en.wikipedia.org/wiki/List_of_Unix_commands
+- Filters : https://en.wikipedia.org/wiki/Filter_(software)#Unix
